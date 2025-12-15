@@ -11,7 +11,7 @@ name: Build and Deploy Code
 on: [push , pull_request]
 
 jobs:
-  jobs:
+  job1:
     runs-on: [ubuntu-latest , windows-latest]
     steps:
       - name: pulling git repo

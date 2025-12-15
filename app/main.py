@@ -7,7 +7,8 @@ from . import models
 from .routers import post , user , auth ,vote
 
 # models
-models.Base.metadata.create_all(bind=engine)
+"""Since we have the alembic and alembic autogenarate so the models are built"""
+# models.Base.metadata.create_all(bind=engine)
 
 app =  FastAPI()
 @app.get("/")
@@ -17,6 +18,7 @@ async def root():
 # Implemanting CORS for app sharing data
 
 origins = [
+    # Links for other applications to connect with this 
     "*"
 ]
 

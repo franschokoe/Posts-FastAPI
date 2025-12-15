@@ -1,5 +1,6 @@
 from fastapi.testclient import TestClient
 from app.main import app
+from fastapi import status
 
 client = TestClient(app)
 
@@ -11,6 +12,6 @@ def test_root():
 
 
 def test_create_user():
-    response = client.post("/users" , json={"email" : "poo@gmail.com" , "password": "poo123"})
+    response = client.post("/users" , json={"email" : "kai@gmail.com" , "password": "kai123"})
     print(response.json())
-    assert response.status_code ==201
+    assert response.status_code == status.HTTP_201_CREATED

@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     algorithm:str
     access_token_expire_minutes:int
 
-    class ConfigDict:
+    class Config:
         env_file = ".env"
 
         

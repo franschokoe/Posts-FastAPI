@@ -25,9 +25,9 @@ origins = [
 app.add_middleware(
     CORSMiddleware,
     allow_origins = origins,
-    allowed_credentials = True,
-    allowed_methods = ["*"],
-    allowed_headers = ["*"],
+    allow_credentials = True,
+    allow_methods = ["*"],
+    allow_headers = ["*"],
 )
 # Path for Posts
 app.include_router(post.router)

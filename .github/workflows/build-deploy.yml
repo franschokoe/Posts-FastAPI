@@ -1,0 +1,21 @@
+name: Build and Deploy Code
+
+# on:
+#   push:
+#     branches:
+#       - "main"
+#   pull_request:
+#     branches:
+#       - "test_branch"
+
+on: [push , pull_request]
+
+jobs:
+  jobs:
+    runs-on: [ubuntu-latest , windows-latest]
+    steps:
+      - name: pulling git repo
+        uses: actions/checkout@v2
+      - name: Hiii from Deploy
+        run: echo "Hiii Frans"
+

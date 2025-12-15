@@ -8,6 +8,10 @@ router = APIRouter(
     tags=["Authentication"]
 )
 
+
+"""Login router for authentication""" 
+
+
 @router.post("/login" , response_model= schemas.Token)
 async def login(user_cred:OAuth2PasswordRequestForm = Depends() ,db: Session = Depends(get_db)):
 

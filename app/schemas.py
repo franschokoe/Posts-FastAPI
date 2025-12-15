@@ -16,7 +16,7 @@ class UserResponse(BaseModel):
     email: EmailStr
     created_at: datetime
 
-    class Config:
+    class ConfigDict:
         # orm_mode = True
         from_attribute = True
 
@@ -57,7 +57,7 @@ class PostResponse(PostBase):
     # content : str
     # published : bool
 
-    class Config:
+    class ConfigDict:
         # orm_mode = True
         from_attribute = True
 
@@ -65,7 +65,7 @@ class PostOut(BaseModel):
     Post : PostResponse  #Was supposed to use the Post as P capitals not lower case
     vote : int
 
-    class Config:
+    class ConfigDict:
         # orm_mode = True
         from_attribute = True
     # model_config = ConfigDict(from_attributes=True)

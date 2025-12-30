@@ -30,3 +30,8 @@ class Vote(Base):
     __tablename__ = "votes"
     user_id= Column(Integer , ForeignKey("users.id" ,ondelete="CASCADE" ) , primary_key=True)
     post_id = Column(Integer , ForeignKey("post.id" , ondelete="CASCADE") , primary_key=True)
+
+
+class Shared(Base):
+    __tablename__ = "shared"
+    

@@ -6,14 +6,12 @@ services:
           - 8000:8000
       env_file:
           - ./.env
-#     postgres:
-#       image:
-#       environment:
-#           env_file:
-#               - ./.env
-    
-#     volumes:
-#       - postgres-db:/var/lib/postgresql/data
+    postgres:
+      image: postgres
+      env_file:
+        - ./.env
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
 
-# volume:
-#   postgres-db:
+volume:
+  postgres-db:

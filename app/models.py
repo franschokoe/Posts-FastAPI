@@ -32,6 +32,5 @@ class Vote(Base):
     post_id = Column(Integer , ForeignKey("post.id" , ondelete="CASCADE") , primary_key=True)
 
 
-class Shared(Base):
-    __tablename__ = "shared"
-    
+# class Shared(Base):
+#     __tablename__ = "shared"
